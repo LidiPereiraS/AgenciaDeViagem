@@ -1,0 +1,157 @@
+﻿@model IEnumerable<Agenciadeviagem.Models.Destino>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="pt-br">
+
+<body>
+    <h1 #00b3b3>Escolha seu destino!</h1>
+    <p>
+        <a asp-action="Create">Quer Viajar?</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ciadade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Horario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Data)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ciadade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Horario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Data)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="row g-2">
+            <div class="col-6">
+                <div class="p-3 border bg-light">De onde você está saíndo?</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Para onde você vai?</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Data Ida/Volta</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Número de Pessoas</div>
+            </div>
+        </div>
+    </div>
+    <br><br /> <br><br />
+    <p><h2>Pacotes</h2></p>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/sao-paulo-picture-id878377556?k=20&amp;m=878377556&amp;s=612x612&amp;w=0&amp;h=zmReQz45GxhbG-5ELs13Az1dlvy4yxUg1OliOCft8GA=" class="card-img-top" alt="Sao Paulo Aerial view of the famous cable-stayed bridge of Sao Paulo city. são paulo stock pictures, royalty-free photos &amp; images">
+                <div class="card-body">
+                    <h5 class="card-title">São Paulo</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 788,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/aerial-view-of-rio-de-janeiro-picture-id485159760?k=20&amp;m=485159760&amp;s=612x612&amp;w=0&amp;h=k3MogFQ9yZph21Xi4if4xXEIsltv-P1m9duMLA_zSqc=" class="card-img-top" alt="Aerial view of Rio de Janeiro Rio de Janeiro, Brazil - December 28, 2013: Aerial view from a helicopter of Rio de Janeiro with the Corcovado mountain and the statue of Christ the Redeemer with Sugarloaf mountain in the background. rio de janeiro stock pictures, royalty-free photos &amp; images" />
+                <div class="card-body">
+                    <h5 class="card-title">Rio de Janeiro</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 865,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/view-of-all-saints-bay-in-salvador-bahia-brazil-picture-id492696632?k=20&amp;m=492696632&amp;s=612x612&amp;w=0&amp;h=DWVD3CZwvozDaQ2CAQFWjo1XMZ_ZTKqjXSDwzaYtfuA=" class="card-img-top" alt=" aView of All Saints Bay in Salvador, Bahia, Brazil View of All Saints Bay (Baia de Todos os Santos) in Salvador, Bahia, Brazil. salvador stock pictures, royalty-free photos &amp; images" />
+                <div class="card-body">
+                    <h5 class="card-title">Salvador</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.432,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/balneario-camboriu-skyline-in-santa-catarina-brazil-picture-id1126584245?k=20&amp;m=1126584245&amp;s=612x612&amp;w=0&amp;h=zrQwSOGWhlBLMIh4D-64Gx8McflRhBNXuRZy8lOdfGg=" class="card-img-top" alt="Balneario Camboriu Skyline, in Santa Catarina, Brazil Photo of Balneario Camboriu Skyline, in Santa Catarina, Brazil santa catarina stock pictures, royalty-free photos &amp; images" />
+                <div class="card-body">
+                    <h5 class="card-title">Balneario Camburiu</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.784,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/fernando-de-noronha-archipelagopernambucobrazil-picture-id1143798907?k=20&amp;m=1143798907&amp;s=612x612&amp;w=0&amp;h=xEImmzTNutJD7fceDcn75beDjyi_PqB1mDogJwMKnKU="  class="card-img-top" alt="Fernando de Noronha Archipelago-Pernambuco-Brazil Dia ensolarado no Arquipélago de Fernando de Noronha - Pernambuco - Brasil. fernando de noronha stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Fernando de Noronha</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 4.832,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/manaus-city-picture-id1130268339?k=20&amp;m=1130268339&amp;s=612x612&amp;w=0&amp;h=tlaR6xOv2-bBpvG0Rp5hwPosQLT-uLZJqQqrclqBow8=" class="card-img-top" alt="Manaus city August 27, 2013 - Manaus, Brazil: Sunset over the city of Manaus, showing the front view the Opera house of Manaus, the buildings, streets and the Rio Negro river in the background. manaus stock pictures, royalty-free photos &amp; images"/> 
+                <div class="card-body">
+                    <h5 class="card-title">Manaus</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.068,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/tourists-at-iguazu-falls-foz-do-iguacu-brazil-picture-id488388458?k=20&amp;m=488388458&amp;s=612x612&amp;w=0&amp;h=t4gcuWyYINCGRnzCS_e5VLXGUw8TwU2MCk5lPQ93MI0=" class="card-img-top" alt="Tourists at Iguazu Falls, Foz do Iguacu, Brazil Tourists at Iguazu Falls, one of the world&#39;s great natural wonders, near the border of Argentina and Brazil. foz do iguaçu stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Foz do Iguaçu</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.682,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/morro-de-so-paulo-brazil-picture-id580128198?k=20&amp;m=580128198&amp;s=612x612&amp;w=0&amp;h=90VL2WhhGBxq6J3wRgn423LKhLZ2leIMz58jt_TqlSk=" class="card-img-top" alt="Morro de São Paulo - Brazil Vista do Mirante e Tirolesa morro de são paulo stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Morro de São Paulo</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 3.584,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Agenciadeviagem.Models.Contato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="pt-br">
+
+<body>
+    <h1>Cadastro:</h1>
+
+    <p>
+        <a asp-action="Create">Contato</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="Pacotes">
+        <img src="https://cdn.pixabay.com/photo/2020/03/27/19/27/airplane-4974678__340.jpg" width="800" height="600" class="card-img-top" alt="Avião, Pista, Aeroporto, Asfalto" />
+        <div class="card-body">
+            <p class="card-text"><h2>Sua agência mais completa e confiável de viagem e turismo</h2></p>
+        </div>
+    </div>
+    <div class="container overflow-hidden">
+        <div class="row gy-5">
+            <div class="col-6">
+                <div class="p-3 border bg-light">Escolha uma form de Login</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">E-Mail</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Senha</div>
+            </div>
+            <div class="col-6">
+                <div class="p-3 border bg-light">Entrar</div>
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Agenciadeviagem.Models.Home>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="pt-br">
+
+<body>
+    <h1>Promoções</h1>
+
+    <p>
+        <a asp-action="Create">Não perca nossas ofertas!</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Promocao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Preco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Contato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Destino)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Promocao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Contato.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Destino.Ciadade)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/sao-paulo-picture-id878377556?k=20&amp;m=878377556&amp;s=612x612&amp;w=0&amp;h=zmReQz45GxhbG-5ELs13Az1dlvy4yxUg1OliOCft8GA=" class="card-img-top" alt="Sao Paulo Aerial view of the famous cable-stayed bridge of Sao Paulo city. são paulo stock pictures, royalty-free photos &amp; images">
+                <div class="card-body">
+                    <h5 class="card-title">São Paulo</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 788,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/aerial-view-of-rio-de-janeiro-picture-id485159760?k=20&amp;m=485159760&amp;s=612x612&amp;w=0&amp;h=k3MogFQ9yZph21Xi4if4xXEIsltv-P1m9duMLA_zSqc=" class="card-img-top" alt="Aerial view of Rio de Janeiro Rio de Janeiro, Brazil - December 28, 2013: Aerial view from a helicopter of Rio de Janeiro with the Corcovado mountain and the statue of Christ the Redeemer with Sugarloaf mountain in the background. rio de janeiro stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Rio de Janeiro</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 865,00</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/view-of-all-saints-bay-in-salvador-bahia-brazil-picture-id492696632?k=20&amp;m=492696632&amp;s=612x612&amp;w=0&amp;h=DWVD3CZwvozDaQ2CAQFWjo1XMZ_ZTKqjXSDwzaYtfuA=" class="card-img-top" alt=" aView of All Saints Bay in Salvador, Bahia, Brazil View of All Saints Bay (Baia de Todos os Santos) in Salvador, Bahia, Brazil. salvador stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Salvador</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.432,00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://media.istockphoto.com/photos/balneario-camboriu-skyline-in-santa-catarina-brazil-picture-id1126584245?k=20&amp;m=1126584245&amp;s=612x612&amp;w=0&amp;h=zrQwSOGWhlBLMIh4D-64Gx8McflRhBNXuRZy8lOdfGg="class="card-img-top" alt="Balneario Camboriu Skyline, in Santa Catarina, Brazil Photo of Balneario Camboriu Skyline, in Santa Catarina, Brazil santa catarina stock pictures, royalty-free photos &amp; images"/>
+                <div class="card-body">
+                    <h5 class="card-title">Balneario Camburiu</h5>
+                    <p class="card-text">Ida e volta</p>
+                    <p class="card-text">R$ 1.784,00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+   color: darkcyan;
+   font-family: Arial, Helvetica, sans-serif;
+}
+#formas_pagamento{
+    color: #ff9900;
+}
+.menu a {
+    color: #ff9900;
+    text-decoration: none;  
+}
+.menu{
+    color: #ff9900;
+}
+#destino{
+    color: darkcyan;
+}
+#Pacotes{
+    color: darkcyan;
+}
+.contatos{
+    color: darkcyan;
+}
+#rodape{
+    color: darkorchid;
+    text-align: center;
+}
+.meudestino{
+    color: darkcyan;
+}
+#recode{
+    color: mediumslateblue;
+}
